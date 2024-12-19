@@ -15,3 +15,4 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
   entities: [__dirname + '/../**/*.entity.{js,ts}'],
   synchronize: environment === 'development',
 };
+console.log('typeOrmConfig :', typeOrmConfig);

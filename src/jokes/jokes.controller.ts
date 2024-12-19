@@ -1,5 +1,5 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
-import { CreateJokeDto, GetRandomJokeDto } from './dto/joke.dto';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { CreateJokeDto } from './dto/joke.dto';
 import { JokesService } from './jokes.service';
 
 @Controller('jokes')
@@ -11,8 +11,8 @@ export class JokesController {
     return this.jokesService.create(createJokeDto);
   }
 
-  @Get()
-  getRandomJoke(@Body() body: GetRandomJokeDto) {
-    return this.jokesService.getRandomJoke(body);
+  @Get(':category?')
+  getRandomJoke(@Param('category') category?: string) {
+    return this.jokesService.getRandomJoke({ category });
   }
 }

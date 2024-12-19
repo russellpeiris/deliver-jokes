@@ -19,8 +19,8 @@ export class JokesService {
     return await this.jokeRepository.save(joke);
   }
 
-  async getRandomJoke(body: GetRandomJokeDto) {
-    const { category } = body;
+  async getRandomJoke(param: GetRandomJokeDto) {
+    const { category } = param;
     let query = this.jokeRepository.createQueryBuilder();
 
     if (category) {

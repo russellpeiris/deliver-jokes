@@ -1,0 +1,9 @@
+GET /deliver-service/jokes HTTP/1.1
+Host: localhost:4003
+Content-Type: application/json
+
+{
+    "category": "Dad Jokes"
+}
+
+###

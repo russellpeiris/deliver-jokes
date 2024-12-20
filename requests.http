@@ -1,9 +1,0 @@
-GET /deliver-service/jokes HTTP/1.1
-Host: 20.2.80.201:4003
-Content-Type: application/json
-
-{
-    "category": "Dad Jokes"
-}
-
-###

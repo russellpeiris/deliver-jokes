@@ -14,6 +14,6 @@ exports.typeOrmConfig = {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     entities: [__dirname + '/../**/*.entity.{js,ts}'],
-    synchronize: environment === 'development',
+    synchronize: true,
 };
 //# sourceMappingURL=typeorm.config.js.map
